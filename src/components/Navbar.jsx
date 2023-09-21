@@ -1,34 +1,24 @@
-import { Nav, NavItem, NavLink} from 'reactstrap';
-import { Outlet } from 'react-router-dom';
+import { Nav, NavItem } from 'reactstrap';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     return (
         <>
             <Nav
-        >
-            <NavItem>
-                <NavLink
-                    active
-                    href="#"
-                >
-                    Link
-                </NavLink>
-            </NavItem>
-            <NavItem>
-                <NavLink href="#">
-                    Another Link
-                </NavLink>
-            </NavItem>
-            <NavItem>
-                <NavLink
-                    disabled
-                    href="#"
-                >
-                    Disabled Link
-                </NavLink>
-            </NavItem>
-        </Nav>
-        <Outlet></Outlet>
+                className="my-2"
+            >
+                <NavItem className="m-2">
+                    <Link to="/">Principal</Link>
+                </NavItem>
+                <NavItem className="m-2">
+                    <Link to="/about">Sobre Nosotros</Link>
+
+                </NavItem>
+                <NavItem className="m-2">
+                    <Link to="/contact">¡Contáctanos!</Link>
+
+                </NavItem>
+            </Nav>
         </>
     );
 };
